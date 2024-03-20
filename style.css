@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 476px; /* Ширина блока todo list */
+    height: 688px; /* Высота блока todo list */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: -307px; /* Смещение сверху */
+    left: -267px; /* Смещение слева */
+    transform: translate(50%, 50%); /* Центрирование блока todo list */
+    overflow: hidden; /* Скрываем все, что выходит за пределы блока */
+}
+
+.todo-list-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 460px; /* Ширина, соответствующая параметрам инпутов */
+    margin-bottom: 10px;
+}
+
+.input-wrapper input {
+    width: calc(100% - 40px); /* Уменьшаем ширину, чтобы учесть отступы и иконку */
+    height: 45px; /* Высота, соответствующая параметрам инпутов */
+    padding: 0 40px 0 10px; /* Отступ справа для иконки */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Радиус скругления границы, соответствующий параметрам инпутов */
+    font-size: 16px;
+    outline: none;
+}
+
+.input-wrapper button {
+    position: absolute;
+    right: 10px; /* Отступ справа для иконки */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.div-class {
+    width: calc(100% - 40px); /* Уменьшаем ширину, чтобы учесть отступы и иконку */
+    height: 45px; /* Высота, соответствующая параметрам инпутов */
+    padding: 0 40px 0 10px; /* Отступ справа для иконки */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Радиус скругления границы, соответствующий параметрам инпутов */
+    font-size: 16px;
+    outline: none;
+}
+
+
+.newBtn {
+    position: absolute;
+    right: 10px; /* Отступ справа для иконки */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
