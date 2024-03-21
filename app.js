@@ -10,31 +10,47 @@ const toDo = [];
 
 const createNewDiv = (textContent, classname) => {
     const newDiv = document.createElement('div')
-    newDiv.textContent = textContent
+    const insideDiv = document.createElement('div')
     const newCheckbox = document.createElement('input')
     newCheckbox.setAttribute('type', 'checkbox');
     const newBtn = document.createElement('button')
-    newBtn.textContent = '-'
-    newDiv.appendChild(newCheckbox)
+    newBtn.textContent = 'х'
+    const textDiv = document.createElement('div')
+    textDiv.textContent = textContent
+
+
+
+    insideDiv.appendChild(newCheckbox)
+    newDiv.appendChild(insideDiv)
+    newDiv.appendChild(textDiv)
     newDiv.appendChild(newBtn)
-    newDiv.className = classname
+
+
     newBtn.className = 'newBtn'
+    newCheckbox.className = 'newCheckbox'
+    newDiv.className = classname
+    textDiv.className = 'textDiv'
     return newDiv
 }
-
-const newBtn = document.createElement('button')
-newBtn.textContent = '-'
 
 const newValue = (event) => {
     event.preventDefault()
     const highInputValue = highInput.value
+    if (highInputValue === '') {
+    alert('Поле не может быть пустым')
+    return
+    }
     toDo.push(highInputValue)
-    const newDiv = document.createElement('div')
-    newDiv.textContent = highInputValue
     highTask.appendChild(createNewDiv(highInputValue, 'div-class'))
     highInput.value = ''
 }
 
 form.addEventListener('submit', newValue)
 
+const deleteClick = (event) => {
+    if (event.target.classList.contains('newBtn')) {
+        alert('Удалить див');
+    }
+}
+document.querySelector('.container').addEventListener('click', deleteClick);
 

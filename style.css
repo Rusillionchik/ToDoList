@@ -57,23 +57,43 @@ body {
 }
 
 .div-class {
-    width: calc(100% - 40px); /* Уменьшаем ширину, чтобы учесть отступы и иконку */
-    height: 45px; /* Высота, соответствующая параметрам инпутов */
-    padding: 0 40px 0 10px; /* Отступ справа для иконки */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    /* box-sizing: border-box; */
+    width: calc(100% - 55px); 
+    height: 45px; 
+    padding: 0 40px 0 10px; 
     border: 1px solid #ccc;
-    border-radius: 6px; /* Радиус скругления границы, соответствующий параметрам инпутов */
+    border-radius: 6px; 
     font-size: 16px;
     outline: none;
+    margin-top: 10px;
 }
 
 
 .newBtn {
-    position: absolute;
-    right: 10px; /* Отступ справа для иконки */
-    top: 50%;
-    transform: translateY(-50%);
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
+    padding-left: 15px;
+    top: 0;
+}
+
+
+.newCheckbox {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+
+.textDiv {
+display: flex;
+align-items: center;
+justify-content: left;
+padding-right: 320px;
 }
