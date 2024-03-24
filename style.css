@@ -71,6 +71,18 @@ body {
     margin-top: 10px;
 }
 
+/* .insideDiv {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row-reverse;
+} */
+.newInputDev {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row-reverse;
+}
 
 .newBtn {
     background: none;
@@ -96,4 +108,9 @@ display: flex;
 align-items: center;
 justify-content: left;
 padding-right: 320px;
+}
+
+
+.strike-through {
+    text-decoration: line-through;
 }
