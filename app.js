@@ -51,7 +51,6 @@ const createNewDiv = (textContent, classname) => {
   newBtn.addEventListener("click", function () {
     toDo = toDo.filter((item) => item !== textContent);
     newDiv.remove();
-    console.log(toDo);
   });
   return newDiv;
 };
@@ -65,24 +64,19 @@ const newValue = (event) => {
   }
   toDo.push({ text: highInputValue, checked: false });
   highTask.appendChild(createNewDiv(highInputValue, "div-class"));
+  //   render();
   highInput.value = "";
   console.log(toDo);
 };
 
+const render = () => {
+  const taskList = document.querySelector(".div-class");
+  console.log(taskList);
+  taskList.innerHTML = "";
+  toDo = toDo.map((elem) => {
+    const taskDiv = createNewDiv(elem, "div-class");
+    taskList.appendChild(taskDiv);
+  });
+};
+
 form.addEventListener("submit", newValue);
-
-// const render = () => {
-//   // Получаем контейнер задач
-//   const taskContainer = document.querySelector(".container");
-
-//   // Удаляем все существующие задачи из контейнера
-//   while (taskContainer.firstChild) {
-//     taskContainer.removeChild(taskContainer.firstChild);
-//   }
-
-//   // Добавляем каждую задачу из массива toDo в контейнер
-//   toDo.forEach((task) => {
-//     const newDiv = createNewDiv(task.text, "div-class");
-//     taskContainer.appendChild(newDiv);
-//   });
-// };
